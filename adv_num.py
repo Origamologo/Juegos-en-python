@@ -1,4 +1,5 @@
 #Adivina el numero
+
 import random
 
 print('¡Hola! ¿Cómo te llamas?')
@@ -29,6 +30,10 @@ while intentos < 6:
         print('Fallaste. El número que estaba pensando era el', num)
 
 def adv_num():
+    """
+    Esta función repite el código anterior y solo sera
+    llamada si el jugador elige echar otra partida
+    """
     num = random.randint(1, 20)
     intentos = 0
     while intentos < 6:
