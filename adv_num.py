@@ -5,20 +5,19 @@ import random
 print('¡Hola! ¿Cómo te llamas?')
 nombre = input()   
 print('Bueno,', nombre, 'estoy pensando un número entre el 1 y 20, ¿puedes adivinarlo? Tienes 6 intentos.')
+print('Intenta adivinar el número')
 
 seguir = True
 
 def adv_num():
     
     """
-    Esta función repite el código anterior y solo sera
-    llamada si el jugador elige echar otra partida
+    Esta función contiene el juego
     """
     num = random.randint(1, 20)
     intentos = 0
 
     while intentos < 6:
-        print('Intenta adivinar el número')
         adv = input()
         while adv.isdigit() == False:
             print('No has introducido un número. Intenta adivinar el número')
@@ -40,6 +39,7 @@ def adv_num():
     jugar = input()
     if jugar == 'Si' or jugar == 'S' or jugar == 's':
         seguir = True
+        print('Intenta adivinar el numero')
         adv_num()
 
     else:
