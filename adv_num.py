@@ -48,7 +48,7 @@ def adv_num():
     else:
         med = stats.mean(media)
         med_r = round(med)
-        print('Acertaste los numeros en', med_r, 'intentos de media')
+        print('Acertaste los numeros en una media de', med_r, 'intentos')
         seguir = False
 
     return seguir, media
