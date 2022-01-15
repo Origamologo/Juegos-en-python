@@ -45,7 +45,7 @@ def adv_num():
     else:
         seguir = False
 
-    return None
+    return seguir
 
 if seguir == True:
     adv_num()
