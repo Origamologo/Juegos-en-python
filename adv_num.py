@@ -1,6 +1,7 @@
 #Adivina el numero
 
 import random
+import statistics as stats
 
 print('¡Hola! ¿Cómo te llamas?')
 nombre = input()   
@@ -16,6 +17,7 @@ def adv_num():
     """
     num = random.randint(1, 20)
     intentos = 0
+    media = []
 
     while intentos < 6:
         adv = input()
@@ -32,6 +34,7 @@ def adv_num():
             print('Estoy pensando en un número más bajo')
         elif adv == num:
             print('¡Muy bien!', nombre, 'has adivinado el número en', intentos, 'intentos.')
+            media.append(intentos)
             break
     if adv != num:
         print('Fallaste. El número que estaba pensando era el', num)
@@ -43,9 +46,12 @@ def adv_num():
         adv_num()
 
     else:
+        med = stats.mean(media)
+        med_r = round(med)
+        print('Acertaste los numeros en', med_r, 'intentos de media')
         seguir = False
 
-    return seguir
+    return seguir, media
 
 if seguir == True:
     adv_num()
